@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --main-color: rgb(78, 115, 223);
+}
+
+.bg-main-color {
+    background-color: var(--main-color);
+}
+
+.text-main-color {
+    color: var(--main-color);
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.sidebar-item:hover {
+    opacity: 1 !important;
+
+}
+
+.list-mapel-hover {
+    transition: all 400ms ease;
+    /* max-width: 300px; */
+    color: white;
+    text-align: center;
+    line-height: -50%;
+}
+
+.list-mapel-hover:hover {
+    background-color: white;
+    box-shadow: 0 0 0 1px rgba(78, 115, 223, .5);
+    /* border: 1px solid var(--main-color); */
+
+
+}
+
+.list-mapel-hover a {
+    transition: all 400ms ease;
+}
+
+.list-mapel-hover:hover a {
+    color: var(--main-color);
+    font-weight: 700;
+
+
+}
+
+
+label {
+    cursor: pointer;
+}
+
+.btn-main-color {
+    background-color: var(--main-color);
+    color: white;
+    border: 0;
+    transition: all 200ms ease;
+}
+
+.btn-main-color:hover {
+    background-color: var(--main-color);
+    color: white;
+    box-shadow: 0 0 0 3px rgba(78, 115, 223, .5);
+}
+
+.btn-main-color:focus {
+    background-color: var(--main-color);
+    color: white;
+    box-shadow: 0 0 0 3px rgba(78, 115, 223, .5);
+}
+
+.card-counter {
+    box-shadow: 2px 2px 10px #DADADA;
+    margin: 5px;
+    padding: 20px 10px;
+    background-color: #fff;
+    height: 100px;
+    border-radius: 5px;
+    transition: .3s linear all;
+    position: relative;
+}
+
+.card-counter:hover {
+    box-shadow: 4px 4px 20px #DADADA;
+    transition: .3s linear all;
+}
+
+.card-counter.primary {
+    background-color: #007bff;
+    color: #FFF;
+}
+
+.card-counter.danger {
+    background-color: #ef5350;
+    color: #FFF;
+}
+
+.card-counter.success {
+    background-color: #66bb6a;
+    color: #FFF;
+}
+
+.card-counter.info {
+    background-color: #26c6da;
+    color: #FFF;
+}
+
+.card-counter i {
+    font-size: 5em;
+    opacity: 0.2;
+}
+
+.card-counter .count-numbers {
+    position: absolute;
+    right: 35px;
+    top: 20px;
+    font-size: 32px;
+    display: block;
+}
+
+.card-counter .count-name {
+    position: absolute;
+    right: 35px;
+    top: 65px;
+    font-style: italic;
+    text-transform: capitalize;
+    opacity: 0.5;
+    display: block;
+    font-size: 18px;
+}
+
+.loading {
+    position: fixed;
+    background-color: white;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 500ms linear;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loading.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.loading::after {
+    content: "";
+    border-radius: 50%;
+    border-right: 5px solid var(--main-color);
+    border-left: 5px solid #26c6da;
+    width: 50px;
+    height: 50px;
+    animation: rotation 2s infinite linear;
+}
+
+
+.loading span {
+    position: absolute;
+    top: calc(50% + 70px);
+    text-transform: capitalize;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(359deg);
+    }
+}
